@@ -1,0 +1,12 @@
+.formControllLabel {
+    border: 1;
+    border-color: 'black';
+    border-style: 'solid';
+    border-radius: 7;
+    margin: 0;
+    box-shadow: '0 3px 5px 2px rgb(105, 240, 174)';
+    color: 'white';
+    height: 70;
+    font-size: 500;
+    padding: 1;
+}

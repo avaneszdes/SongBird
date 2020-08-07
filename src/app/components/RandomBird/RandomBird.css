@@ -1,0 +1,68 @@
+.birdImage{
+    width: 200px;
+    height: 155px;
+    border-radius: 10px;
+    margin: 0
+}
+
+.container{
+    display: flex;
+    padding: 1rem;
+}
+
+.container .rightContent{
+    margin-left: 40px;
+}
+
+.audioLine {
+    display: flex;
+    justify-content: center;
+    min-width: 500px;
+    height: 4px;
+    background-color: rgb(119, 115, 115)  ;
+  }
+
+
+.playerContainer{
+    width: 1000px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-top-color: rgb(119, 115, 115) ;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.playbackButton {
+    transition: 0.2s;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(105, 240, 174);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.playbackButton svg {
+    transition: 0.2s;
+    width: 18px;
+    height: 18px;
+    color: #54b1c1;
+}
+
+.playbackButton:hover svg {
+    width: 18px;
+    height: 18px;
+    color: #00bc8c;
+    transform: scale(1.03);
+}
+
+.h1Style {
+    margin: 0;
+    width: 100px;
+    height: 50px;
+    color: white;
+}

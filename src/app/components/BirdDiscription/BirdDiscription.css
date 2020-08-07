@@ -1,0 +1,86 @@
+.birdImage{
+    margin: 15px;
+    display: flex;
+    width: 200px;
+    height: 165px;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+}
+
+.h1Style {
+    margin: 15px 0px 0px 0px;
+    display: flex;
+    color: white;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+.birdEnglishName {
+
+    padding: 7px 0px 0px 3px;
+    margin: 3px 0px 0px 0px;
+    color: white;
+    width: 400px;
+    height: 35px;
+    border-width: 1px 0px 1px 0px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: grey;
+    border-bottom-color: grey;
+}
+
+.audioLine {
+    display: flex;
+    justify-content: center;
+    min-width: 325px;
+    height: 4px;
+    background-color: rgb(119, 115, 115)  ;
+}
+
+.playerContainer{
+    width: 500px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.playbackButton {
+    transition: 0.2s;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(105, 240, 174);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+  
+.playbackButton svg {
+    transition: 0.2s;
+    width: 18px;
+    height: 18px;
+    color: #54b1c1;
+
+}
+  
+.playbackButton:hover svg {
+    width: 18px;
+    height: 18px;
+    color: #00bc8c;
+    transform: scale(1.03);
+}
+
+
+.birdDiscription {
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: flex;
+    color: white;
+    margin-top: 20px;
+    margin-left: -215px;
+    width: 600px;
+    height: 100px;
+}
