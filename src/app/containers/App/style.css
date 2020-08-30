@@ -12,11 +12,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  max-width: 1320px;
-  min-width: 500px;
-  height: 190px;
+  max-width: 2000px;
+  min-width: 450px;
   border-radius: 7px;
-  background-color: rgb(59, 58, 58);
+  background-color: #303030;
+  height: 220px;
 }
 
 .answerContainer {
@@ -26,11 +26,15 @@
   max-height: 1000px;
 }
 .birdDiscription {
+  border-color: grey;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 1px;
   margin-left: 10px;
   max-height: 500px;
   min-height: 300px;
   width: 650px;
-  background-color: rgb(59, 58, 58);
+  background-color: #303030;
   border-radius: 7px;
   margin-top: 2rem;
 }
@@ -38,7 +42,7 @@
   margin-right: 10px;
   max-height: 500px;
   width: 650px;
-  background-color: rgb(59, 58, 58);
+  background-color: #303030;
   border-radius: 7px;
   margin-top: 2rem;
 }
@@ -47,6 +51,7 @@
  
 }
 .container {
+  max-width: 2000px;
   padding-left: 22%;
   padding-right: 22%;
 }
@@ -65,4 +70,53 @@
   color: rgb(105, 240, 174);
 }
 
+.formRadioIfTrue:checked:before {
+  display: flex;
+  content: "";
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: green;
 
+}
+
+.gameOwer{
+  margin-top: 35px;
+  border-radius: 10px;
+  background-color: #303030;
+  width: auto;
+  height: 600px;
+}
+
+.congratulation{
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 100px 27% 0px 27%;
+  font-size: 5rem;
+  color: aliceblue;
+  margin-block-end: 0rem;
+}
+
+.gamePoints{
+  color: aliceblue;
+  padding-left: 19rem;
+}
+.gameAgain{
+  border-radius: 7px;
+  width: 80%;
+  height: 60px;
+  background-color: rgb(105, 240, 174);
+  margin: 50px 0 0 130px;
+}.gameAgain:hover{
+  background-color: rgb(51, 124, 89);
+}
+
+
+.textGameAgain{
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: rgb(36, 49, 61);
+  margin-block: 0px;
+}

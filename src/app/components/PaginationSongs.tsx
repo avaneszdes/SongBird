@@ -1,32 +1,22 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import green from '@material-ui/core/colors/green'; 
 
-const useStyles = makeStyles({
-    root: {
-        flexGrow: 1,
-    },
-});
 
-export default function PaginationSongs() {
-    const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+interface Props{
+    numberOfTypeBird: number,
+}
 
-    const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-        setValue(newValue);
-    };
-
+export default function PaginationSongs({ numberOfTypeBird } : Props) {
     return (
-        <Paper style={{background: green.A200, fontWeight: 900 }}className={classes.root}>
+        <Paper style={{background: green.A200, fontWeight: 900 }}>
             <Tabs
-                value={value}
+                value={numberOfTypeBird}
                 indicatorColor="secondary"
                 textColor="secondary"
                 variant="fullWidth"
-                onChange={handleChange}
                 centered
             >
                 <Tab label="Разминка" />

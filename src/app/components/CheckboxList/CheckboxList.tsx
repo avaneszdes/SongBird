@@ -1,46 +1,35 @@
 import React from 'react';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import { makeStyles } from '@material-ui/core/styles';
+import styles from './CheckboxList.css';
+import { Bird } from '../BirdData';
 
-const useStyles = makeStyles({
-    root: {
-        border: 1,
-        borderColor: 'black',
-        borderStyle: 'solid',
-        borderRadius: 7,
-        margin: 0,
-        boxShadow: '0 3px 5px 2px rgb(105, 240, 174)',
-        color: 'white',
-        height: 70,
-        fontSize: 500,
-        padding: 1,
-    },
+
+interface Props {
+    onSelectedCorrect: (item : Bird) => void,
+    birds: Bird[],
+}
+
+export default function CheckboxList({ onSelectedCorrect, birds }: Props) {
+
+    const getCorrectAnswer = (item: Bird) => {
+        onSelectedCorrect(item);
+    }
     
-   
-});
-
-export default function CheckboxList() {
-    const [value, setValue] = React.useState('female');
-
-
-    const classes = useStyles();
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValue((event.target as HTMLInputElement).value);
-    };
-
     return (
-        <FormControl fullWidth={true} focused={true} >
-            <RadioGroup value={value} onChange={handleChange}>
-                <FormControlLabel className={classes.root}  value="0" control={<Radio />} label="Female" />
-                <FormControlLabel className={classes.root} value="1" control={<Radio />} label="Male" />
-                <FormControlLabel className={classes.root} value="2" control={<Radio />} label="Other" />
-                <FormControlLabel className={classes.root} value="3" control={<Radio />} label="Male" />
-                <FormControlLabel className={classes.root} value="4" control={<Radio />} label="Other" />
-            </RadioGroup>
-        </FormControl>
+        <div>
+            {birds.map((item) =>
+                <div key={item.name} className={styles.listItem} onClick={() => getCorrectAnswer(item)} >
+                    <input id={item.name}
+                        style={{marginRight: 20}}
+                        className={item.radio}
+                        type='radio'
+                        checked={item.selected}
+                        onChange={()=> {}}
+                    />
+                    {item.name}
+                </div>
+            )}
+
+        </div>
     );
 }
+
