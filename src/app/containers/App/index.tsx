@@ -8,8 +8,6 @@ import { RandomBird } from '../../components/RandomBird/RandomBird';
 import { birdArray } from '../../components/BirdData';
 import { Bird } from '../../components/BirdData';
 
-
-
 export const App = () => {
 
   const [nextButtonEnabled, setNextButtonEnabled] = useState(false);
@@ -77,7 +75,7 @@ export const App = () => {
     setNumberOfTypeBird(0)
     setPress(false);
   }
-  console.log('it is rand', randomBird);
+
   return (
     <div >
 
