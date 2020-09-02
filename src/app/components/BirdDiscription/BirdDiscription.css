@@ -78,8 +78,9 @@
 .birdDiscription {
     font-family:  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: white;
-    margin-top: 20px;
-    margin-left: -215px;
-    width: 600px;
+    display: flex;
+    margin: 200px 0 0 15px;;
+    position: fixed;
+    width: 623px;
     height: 120px;
 }

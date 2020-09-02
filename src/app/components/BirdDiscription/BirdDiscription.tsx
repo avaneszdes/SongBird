@@ -28,10 +28,11 @@ export default function BirdDiscription({ bird, press }: Props) {
                         </div>
                         <div className={styles.audioLine} />
                     </div>
-                    <h3 className={styles.birdDiscription}> {bird.discription}</h3>
+                    
 
 
                 </div>
+                <h3 className={styles.birdDiscription}> {bird.discription}</h3>
             </div> : <h2 style={ {paddingLeft: 50 }}className={styles.h1Style}>Послушайте плеер.Выберите птицу из списка</h2>
     )
 }

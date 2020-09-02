@@ -21,25 +21,31 @@ export const App = () => {
   const [press, setPress] = useState(false);
 
 
+  const playSound = (soundIsPlay: boolean) => {
+    const audio = new Audio(soundIsPlay ? '../../../assets/sounds/notOk.mp3' : '../../../assets/sounds/ok.mp3')
+    audio.play()
+  }
+
   const getCorrectAnswer = (bird: Bird) => {
-   
+
     setPress(true);
     const newArray = birdsArray.map((item) => {
-      
-      if(!randomBird || !randomBird?.name){
-        console.log(randomBird)
-      }
 
       if (item.name === bird.name) {
         setListItem(item);
-        if (item.name === randomBird.name) {
+        if (item.name === randomBird.name && !nextButtonEnabled) {
+          playSound(true);
           setNextButtonEnabled(true);
           setCountOfGame(countOfGame + countOfRound);
           return { ...item, selected: true, radio: styles.formRadioIfTrue }
         }
+        else if (!nextButtonEnabled) {
+          playSound(false);
+          setCountOfRound(countOfRound - 1);
+          return { ...item, selected: true }
+        }
 
-        setCountOfRound(countOfRound - 1);
-        return { ...item, selected: true }
+
       }
 
       return item;
@@ -70,7 +76,7 @@ export const App = () => {
     setBirdsArray(birdArray);
     setCountOfGame(0);
     setCountOfRound(5);
-    setRandomBird( birdsArray[getRandomIntFromRange(0)]);
+    setRandomBird(birdsArray[getRandomIntFromRange(0)]);
     setListItem(birdsArray[36]);
     setNumberOfTypeBird(0)
     setPress(false);
@@ -93,8 +99,8 @@ export const App = () => {
 
             <div>
               <div className={styles.randomBirdContainer}>
-                <RandomBird bird={nextButtonEnabled ? randomBird : birdArray[36]} />
-              
+                <RandomBird song={randomBird.song} bird={nextButtonEnabled ? randomBird : birdArray[36]} />
+
               </div>
               <div className={styles.answerContainer}>
                 <div className={styles.answerList}>
