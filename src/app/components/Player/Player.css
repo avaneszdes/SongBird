@@ -1,90 +1,12 @@
-.birdImage{
-    margin: 15px;
-    display: flex;
-    width: 200px;
-    height: 165px;
-    border-radius: 10px;
-}
-.container{
-    display: flex;
-}
-
-.h1Style {
-    margin: 15px 0px 0px 0px;
-    display: flex;
-    color: white;
-    font-family:  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  }
-
-.birdEnglishName {
-
-    padding: 7px 0px 0px 3px;
-    margin: 3px 0px 0px 0px;
-    color: white;
-    width: 400px;
-    height: 35px;
-    border-width: 1px 0px 1px 0px;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-top-color: grey;
-    border-bottom-color: grey;
-}
-
-.audioLine {
-    display: flex;
-    justify-content: center;
-    min-width: 325px;
-    height: 4px;
-    background-color: rgb(119, 115, 115)  ;
-}
-
 .playerContainer{
-    width: 500px;
-    height: 80px;
+    width: 1000px;
+    height: 90px;
     display: flex;
     align-items: center;
-   
+    border-top-color: rgb(119, 115, 115) ;
+    border-top-width: 2px;
+    border-top-style: solid;
 }
-
-.playbackButton {
-    transition: 0.2s;
-    width: 50px;
-    height: 50px;
-    border: 2px solid rgb(105, 240, 174);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-right: 20px;
-    cursor: pointer;
-}
-  
-.playbackButton svg {
-    transition: 0.2s;
-    width: 18px;
-    height: 18px;
-    color: #54b1c1;
-
-}
-  
-.playbackButton:hover svg {
-    width: 18px;
-    height: 18px;
-    color: #00bc8c;
-    transform: scale(1.03);
-}
-
-
-.birdDiscription {
-    font-family:  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: white;
-    display: flex;
-    margin: 200px 0 0 15px;;
-    position: fixed;
-    width: 623px;
-    height: 120px;
-}
-
 
 .playbackButton {
     transition: 0.2s;
@@ -115,9 +37,14 @@
 .h1Style {
     font-family:  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
+    
     height: 50px;
     color: white;
 }
+
+
+
+
 
 
 input[type=range] {
@@ -223,15 +150,15 @@ input[type=range] {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    min-width: 326px;
-    width: 100px;
-    
+    min-width: 350;
+    width: 100%;
+    margin-left: 20px;
   }
 
   .songTime{
       color: white;
       margin: -29px 0 0 80px;
-      width: 64%;
+      width: 92%;
       display: flex;
       justify-content: space-between;
   }
